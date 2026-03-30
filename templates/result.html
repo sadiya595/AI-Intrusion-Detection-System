@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+<h1 class="text-2xl font-bold mb-4">📊 Bulk Prediction Results</h1>
+
+<div class="bg-white p-4 rounded shadow mb-6">
+    {{ tables | safe }}
+</div>
+
+<h2 class="text-xl font-semibold mb-2">📈 Visualization</h2>
+
+<div class="bg-white p-4 rounded shadow">
+    <img src="{{ url_for('static', filename=chart) }}" class="mx-auto">
+</div>
+
+<a href="/" class="mt-4 inline-block text-blue-600">⬅ Back</a>
+
+</body>
+</html>
